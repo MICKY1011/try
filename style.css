@@ -1,41 +1,68 @@
-.container {
+body {
+  font-family: "Roboto", sans-serif;
+  background-color: #272727; /* Gray-black background */
+  color: #fff;
   display: flex;
+  align-items: center;
   justify-content: center;
-  text-align: center;
-  margin-top: 10%;
+  min-height: 100vh;
 }
 
+/* Calculator container */
+.container {
+  background-color: #333; /* Darker gray-black for container */
+  border-radius: 10px;
+  box-shadow: 0 5px 10px rgba(0, 0, 0, 0.2);
+  padding: 20px;
+  width: 300px;
+}
+
+/* Calculator display */
 .box {
-  height: 450px;
-  width: 350px;
-  background-image: linear-gradient(gray, lightblue);
-}
-.box input {
-  margin: 15px;
-  outline: 0;
-  border: none;
-  border-radius: 5px;
-  box-shadow: 0 0 5px black;
-  background-color: transparent;
-}
-.box input::-moz-placeholder {
-  color: black;
-}
-.box input::placeholder {
-  color: black;
-}
-.box .inner-box {
   display: flex;
-}
-.box .inner-box .button {
-  border: none;
+  flex-direction: column;
+  background-color: #444; /* Black background for display */
   border-radius: 5px;
-  box-shadow: 0 0 5px black;
-  width: 30%;
-  background-color: transparent;
-  margin: 5px;
+  padding: 10px;
 }
-.box .inner-box .op-section .button {
-  width: 50px;
-  height: 50px;
+
+/* Button styles */
+.button {
+  background-color: #f57c00;
+  border: none;
+  border-radius: 15px; /* Rounded corners for buttons */
+  padding: 10px 20px;
+  margin: 2.5px;
+  color: #fff;
+  text-transform: uppercase;
+  font-weight: bold;
+  cursor: pointer;
+  transition: background-color 0.2s ease-in-out;
+}
+
+input {
+  font-size: 18px;
+  font-weight: bold;
+  background-color: transparent;
+  border: none;
+  outline: none; /* Remove default outline */
+  color: #fff;
+  padding: 10px 15px; /* Adjusted padding for better visual balance */
+  text-align: right;
+  border-radius: 5px; /* Rounded corners for input */
+}
+
+.button:hover {
+  background-color: #f68b1f; /* Darker orange on hover */
+}
+
+/* Operator button styles */
+.op-section .button {
+  background-color: #555; /* Gray-black for operator buttons */
+}
+
+/* Special button styles (Clear and Equal) */
+.button-section .button.clear,
+.op-section .button.equal {
+  background-color: #666; /* Slightly darker gray-black */
 }/*# sourceMappingURL=style.css.map */
